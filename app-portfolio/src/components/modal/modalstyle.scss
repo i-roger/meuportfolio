@@ -1,0 +1,98 @@
+#modal{
+    display:none;
+    visibility: invisible;
+    position:fixed;
+    z-index:999;
+    //para posicionar o modal no centro? TALVEZ ESTEJA ERRADO
+    // top:21%;
+    // left:25%;
+  }
+  
+  /*IDEIA --> CRIAR TAGS MODAL PRO BACKGROUND, MODALCONTAINER, MODALCONTENT
+  E AS TAGS DE DENTRO*/
+  
+
+  #container {
+    padding: 5em;
+    backdrop-filter: blur(8px);
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.64);
+  }
+
+  //Botão para fechar MODAL
+  .close {
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 64px;
+    height: 64px;
+    opacity: 0.3;
+  }
+  .close:hover {
+    opacity: 1;
+  }
+  .close:before, .close:after {
+    position: absolute;
+    left: 31px;
+    content: ' ';
+    height: 64px;
+    width: 2px;
+    background-color: #06c;
+  }
+  .close:before {
+    transform: rotate(45deg);
+  }
+  .close:after {
+    transform: rotate(-45deg);
+  }
+  //Botão para fechar MODAL
+
+  .skills {
+    height:100%;
+    ul {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap:wrap;
+      li {
+        text-align: center;
+        display: inline;
+        color: #fff;
+        font-size: 40px;
+        .options{
+          img{
+            width: 50%;
+          }
+          p{
+            font-size: 30px;
+          }
+        }
+        .options:hover{
+          img{
+            width:100%;
+          }
+          p{
+            font-size: 40px;
+          }
+        }
+      }
+      li:hover {
+        color: #06c;
+      }
+    }
+  }
+
+  @media (max-width: 680px){
+    .skills{
+      ul{
+          flex-direction: column; 
+        li{
+          
+        }
+      }
+    }
+  }

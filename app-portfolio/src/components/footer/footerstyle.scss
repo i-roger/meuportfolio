@@ -1,0 +1,54 @@
+.footer{
+    display:flex;
+    justify-content: center;
+    background-color: #212121;
+    .contentfooter{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        height: 200px;
+        .info{
+            p{
+                text-align: center;
+                word-break:break-all;
+                font-size: 25px;
+                color:white;
+            }
+        }
+        .socials{
+            // margin-bottom: 30px;
+            ul{
+                width:300px;
+                display:flex;
+                justify-content: space-around;
+                li{
+                    list-style:none;
+                    a{
+                        svg{
+                            fill: rgba(255, 255, 255, 0.226);
+                            animation: zoom 7s infinite;
+                            // width:64px;
+                        }
+                        svg:hover{
+                            fill: rgba(255, 255, 255, 0.829);
+                        }
+                    }
+                    @keyframes zoom{
+                        0%{
+                            transform: scale(100%);
+                        }
+                        
+                        50% {
+                            transform: scale(150%);
+                        }
+
+                        100%{
+                            transform: scale(100%);
+                        }
+                    };
+            }
+        }
+    }
+    }
+}
